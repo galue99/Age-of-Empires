@@ -1,6 +1,11 @@
 # Age of Empires II DE - Civilizaciones
+En la dirección https://www.aoepulse.com/api/v1/civ_win_rates/? está expuesta una API
+que brinda información sobre las civilizaciones del juego Age Of Empires II DE.
 
-Una aplicación web sencilla construida con ReactJS que permite a los usuarios visualizar las estadísticas y detalles de las diferentes civilizaciones de Age of Empires II DE.
+Te pedimos que crees una aplicación web en ReactJS que consuma de esa API y que
+muestre el listado de todas las civilizaciones del juego y que permita seleccionar una y, al
+seleccionarla, muestre la cantidad de partidos jugados contra la cantidad de partidos
+ganados de esa civilización
 
 ![Captura de pantalla de la aplicación](./src/assets/img/pantalla.png)
 
