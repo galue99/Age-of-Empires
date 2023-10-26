@@ -33,7 +33,6 @@ function App() {
       <CivSelector civs={civData.civs_list || []} onCivSelect={handleCivSelect} />
       <CivDetails civ={selectedCiv} />
     </div>
-
   );
 }
 
