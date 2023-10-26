@@ -1,4 +1,5 @@
 :root {
+  --aoe-black: #000000;
   --aoe-gold: #DAA520;
   --aoe-blue: #1E4D8B;
   --aoe-brown: #8B4513;
@@ -7,7 +8,7 @@
 
 body {
   font-family: 'Times New Roman', Times, serif;
-  background-color: var(--aoe-blue);
+  background-color: var(--aoe-black);
   color: var(--aoe-gold);
 }
 
@@ -32,7 +33,7 @@ h1 {
 }
 
 .civ-detail {
-  border: 1px solid #8B4513;
+  border: 1px solid var(--aoe-brown);
   padding: 20px;
   border-radius: 10px;
   background-color: #f4e4ba;
@@ -43,13 +44,20 @@ h1 {
 
 .civ-detail h2 {
   margin-bottom: 15px;
-  color: #8B4513;
+  color: var(--aoe-brown);
 }
 
 .civ-detail p {
   margin-bottom: 10px;
   color: #6b4a1e;
   font-weight: bold;
+}
+
+.icon-detail {
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
 }
 
 /* Estilo para el contenedor */
@@ -76,7 +84,7 @@ h1 {
 .civ-selector-dropdown {
   width: 100%;
   padding: 10px;
-  border-color: #8B4513;
+  border-color: var(--aoe-brown);
 }
 
 /* Estilo para el dropdown o lista de civilizaciones */
