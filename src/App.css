@@ -1,18 +1,94 @@
-.App {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding: 20px;
+:root {
+  --aoe-gold: #DAA520;
+  --aoe-blue: #1E4D8B;
+  --aoe-brown: #8B4513;
+  --aoe-green: #556B2F;
 }
 
-select {
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: var(--aoe-blue);
+  color: var(--aoe-gold);
+}
+
+.App {
+  border: 5px solid var(--aoe-gold);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 99vh;
+  text-align: center;
+}
+
+h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: var(--aoe-gold);
+}
+
+.civ-detail {
+  border: 1px solid #8B4513;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f4e4ba;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  width: 300px;
+  text-align: center;
+}
+
+.civ-detail h2 {
+  margin-bottom: 15px;
+  color: #8B4513;
+}
+
+.civ-detail p {
+  margin-bottom: 10px;
+  color: #6b4a1e;
+  font-weight: bold;
+}
+
+/* Estilo para el contenedor */
+.civ-selector-container {
+  border: 1px solid #8B4513;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f4e4ba;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  width: 300px;
+  text-align: center;
+  margin-bottom: 30px;  /* Esto asegurará que haya espacio entre el selector y los detalles */
+}
+
+/* Estilo para el label */
+.civ-selector-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #6b4a1e;
+  font-weight: bold;
+}
+
+/* Estilo para el dropdown */
+.civ-selector-dropdown {
+  width: 100%;
+  padding: 10px;
+  border-color: #8B4513;
+}
+
+/* Estilo para el dropdown o lista de civilizaciones */
+.civ-selector {
   padding: 10px;
   margin: 20px 0;
+  border: 2px solid var(--aoe-gold);
+  background-color: var(--aoe-brown);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-h2 {
-  margin-top: 30px;
-}
-
-p {
-  font-size: 18px;
+.civ-selector:hover {
+  background-color: var(--aoe-green);
 }
