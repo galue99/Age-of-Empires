@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CivSelector({ civs, onCivSelect }) {
+const CivSelector = ({ civs, onCivSelect }) => {
   return (
     <div className="mb-4">
       <label htmlFor="civilizations" className="block mb-2 text-sm font-medium text-gray-700">Elíja una civilización</label>
