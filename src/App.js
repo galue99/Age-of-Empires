@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import DataTable from 'react-data-table-component';
 
 import './App.css';
-import CivSelector from "./components/CivSelector";
 import CivDetails from "./components/CivDetails";
 
 function App() {
@@ -18,23 +18,41 @@ function App() {
         console.error("Error fetching data:", error);
       }
     };
-
     fetchData();
 
   }, []);
 
-  const handleCivSelect = (civName) => {
-    setSelectedCiv(civData.civs_list?.find(civ => civ.name === civName));
+  const columns = [
+    {
+      name: 'Nombre',
+      selector: row => row.name,
+      sortable: true,
+    },
+  ];
+
+  const handleRowClicked = (row) => {
+    setSelectedCiv(row);
   };
 
   return (
     <div className="App">
-      <div className="Container">
+      <div className="title">
         <h1>Age of Empires II DE</h1>
-        <CivSelector civs={civData.civs_list || []} onCivSelect={handleCivSelect} />
-        <CivDetails civ={selectedCiv} />
       </div>
-
+      <div className="Container">
+        <div className="tableContainer">
+          <DataTable
+            title="Civilizaciones"
+            columns={columns}
+            data={civData.civs_list || []}
+            onRowClicked={handleRowClicked}
+            pagination
+          />
+        </div>
+        <div className="detailContainer">
+          <CivDetails civ={selectedCiv} />
+        </div>
+      </div>
     </div>
   );
 }
